@@ -130,3 +130,13 @@ Response example
 ]
 ```
 
+### About the solution
+The most difficult part for me was figuring out the process using RabbitMQ as it was my first time using a messaging queue in an application. I decided to use the remote procedure call feature of rabbitMQ so that when the queueProducer submits a new request, then a response could be sent back from the queueListener that consumes the messages. Simple get request I implemented in the queueProducer part of the API, because the database only gets read and I think that sending that request through a message queue would just make the response time longer.
+
+
+I did not manage to write any tests for the application, because I don't know how to test applications using message queues yet and I didn't have the time to figure it out.
+
+Also I do not know how many request could this application handle per second on a good machine, but on my own machine that was running 4 docker containers at the same time, a single request took from 50ms up to 14 seconds. But assuming that all request take about 50ms then about 20 request per second. For horizontal scaling one could concider launching multiple queueReceivers that would listen to the same message queue and handle the update and insert requests.
+
+
+In conclusion, i gave it my best and learned a lot! I think if I would have had more time, then i would have implemented better input checks and error handling on the queueReceiver side. At the time the queueReceiver just returns null if an input is invalid and assumes that queueProducer does all the needed data validation and sends valid data to the queue.
