@@ -9,7 +9,7 @@ Navigate to the project folder and run (for windows):
 docker-compose up --build
 ```
 
-This should buld 4 container for queueProducer, queueReceiver, PostgreSQL database and RabbitMQ server.
+This should buld 4 containers for queueProducer, queueReceiver, PostgreSQL database and RabbitMQ server.
 
 ## API documentation
 
