@@ -22,11 +22,11 @@ To create a new account with empty balances
 
 Request body example
 ```
-	{
+{
 	"customerId":"test",
 	"country":"EST",
 	"currencies":["USD","EUR"]
-	}
+}
 ```
 
 Response example
@@ -82,7 +82,7 @@ Request body example
 ```
 {
 	"accountId":2,
-  "amount":9.5,
+  	"amount":9.5,
 	"currency":"USD",
 	"direction":"OUT",
 	"description":"test"
