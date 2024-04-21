@@ -1,4 +1,4 @@
-### Summer intertnship test assignment
+# Summer intertnship test assignment
 A sample banking application using REST APIs and RabbitMQ. The queuePorducer folder contains the API endpoints and logic for handling API requests and sending them to the rabbitMQ message queue. 
 QueueReceiver folder contains a spring boot application that handles the update and insert requests coming from rabbitMQ queues. 
 
@@ -13,7 +13,7 @@ This should buld 4 container for queueProducer, queueReceiver, PostgreSQL databa
 
 ## API documentation
 
-# /api/account/
+### /api/account/
 
 To create a new account with empty balances
 
@@ -71,7 +71,7 @@ Response example
 }
 ```
 
-# /api/transaction
+### /api/transaction
 
 Create a new transaction
 
